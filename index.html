@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusTech - Innovative Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        main {
+            flex: 1;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 pt-16">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-indigo-600">NexusTech</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-900 hover:text-indigo-600 font-medium">Home</a>
+                    <a href="services.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium">Services</a>
+                    <a href="about.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium">About</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-indigo-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-900 font-medium">Home</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-600 hover:text-gray-900">Services</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-600 hover:text-gray-900">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-gradient text-white pt-20 pb-16 md:pt-24 md:pb-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">Transform Your Digital Presence</h1>
+                    <p class="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 opacity-90">We create innovative solutions that drive growth and engagement</p>
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                        <a href="services.html" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 text-sm md:text-base">
+                            Explore Services
+                        </a>
+                        <a href="about.html" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition duration-300 text-sm md:text-base">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-16 md:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Why Choose NexusTech?</h2>
+                    <p class="text-lg md:text-xl text-gray-600">Cutting-edge solutions tailored to your business needs</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <div class="card-hover bg-gray-50 p-6 md:p-8 rounded-xl text-center">
+                        <div class="w-14 h-14 md:w-16 md:h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+                            <i class="fas fa-rocket text-xl md:text-2xl text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4">Fast Development</h3>
+                        <p class="text-gray-600 text-sm md:text-base">Rapid prototyping and agile development processes to bring your ideas to life quickly.</p>
+                    </div>
+                    <div class="card-hover bg-gray-50 p-6 md:p-8 rounded-xl text-center">
+                        <div class="w-14 h-14 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+                            <i class="fas fa-shield-alt text-xl md:text-2xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4">Secure Solutions</h3>
+                        <p class="text-gray-600 text-sm md:text-base">Enterprise-grade security measures to protect your data and ensure compliance.</p>
+                    </div>
+                    <div class="card-hover bg-gray-50 p-6 md:p-8 rounded-xl text-center">
+                        <div class="w-14 h-14 md:w-16 md:h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+                            <i class="fas fa-chart-line text-xl md:text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4">Scalable Growth</h3>
+                        <p class="text-gray-600 text-sm md:text-base">Solutions designed to grow with your business, handling increased traffic and data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Showcase -->
+        <section class="py-16 md:py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Work</h2>
+                    <p class="text-lg md:text-xl text-gray-600">See what we've created for our clients</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <div class="card-hover bg-white rounded-xl overflow-hidden shadow-md">
+                        <div class="h-40 sm:h-48 overflow-hidden bg-gray-200 flex items-center justify-center">
+                            <span class="text-gray-600">E-Commerce Platform Preview</span>
+                        </div>
+                        <div class="p-4 md:p-6">
+                            <h3 class="text-lg md:text-xl font-semibold mb-2">E-Commerce Platform</h3>
+                            <p class="text-gray-600 text-sm md:text-base mb-4">Complete online store solution with integrated payment processing.</p>
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs md:text-sm px-2 md:px-3 py-1 rounded-full">Web Development</span>
+                        </div>
+                    </div>
+                    <div class="card-hover bg-white rounded-xl overflow-hidden shadow-md">
+                        <div class="h-40 sm:h-48 overflow-hidden bg-gray-200 flex items-center justify-center">
+                            <span class="text-gray-600">Mobile Banking App Preview</span>
+                        </div>
+                        <div class="p-4 md:p-6">
+                            <h3 class="text-lg md:text-xl font-semibold mb-2">Mobile Banking App</h3>
+                            <p class="text-gray-600 text-sm md:text-base mb-4">Secure mobile banking application with biometric authentication.</p>
+                            <span class="inline-block bg-green-100 text-green-800 text-xs md:text-sm px-2 md:px-3 py-1 rounded-full">Mobile App</span>
+                        </div>
+                    </div>
+                    <div class="card-hover bg-white rounded-xl overflow-hidden shadow-md">
+                        <div class="h-40 sm:h-48 overflow-hidden bg-gray-200 flex items-center justify-center">
+                            <span class="text-gray-600">Analytics Dashboard Preview</span>
+                        </div>
+                        <div class="p-4 md:p-6">
+                            <h3 class="text-lg md:text-xl font-semibold mb-2">Analytics Dashboard</h3>
+                            <p class="text-gray-600 text-sm md:text-base mb-4">Real-time data visualization and business intelligence platform.</p>
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs md:text-sm px-2 md:px-3 py-1 rounded-full">Data Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 md:py-20 bg-indigo-600 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">Ready to Start Your Project?</h2>
+                <p class="text-lg md:text-xl mb-6 md:mb-8 opacity-90">Let's discuss how we can help transform your business with technology.</p>
+                <a href="about.html" class="bg-white text-indigo-600 px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold text-sm md:text-base lg:text-lg hover:bg-gray-100 transition duration-300 inline-block">
+                    Get Started Today
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 md:py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <div>
+                    <h3 class="text-lg md:text-xl font-bold mb-4">NexusTech</h3>
+                    <p class="text-gray-400 text-sm md:text-base">Innovative technology solutions for modern businesses.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 md:mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white text-sm md:text-base">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white text-sm md:text-base">Services</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white text-sm md:text-base">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 md:mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm md:text-base">Web Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm md:text-base">Mobile Apps</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm md:text-base">Cloud Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 md:mb-4">Contact</h4>
+                    <p class="text-gray-400 text-sm md:text-base">info@nexustech.com</p>
+                    <p class="text-gray-400 text-sm md:text-base">+1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-gray-400 text-sm md:text-base">
+                <p>&copy; 2024 NexusTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const menuButton = document.getElementById('mobile-menu-button');
+            
+            if (!menu.contains(event.target) && !menuButton.contains(event.target) && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

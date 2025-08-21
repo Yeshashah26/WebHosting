@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NexusTech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        main {
+            flex: 1;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .team-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 pt-16">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-indigo-600">NexusTech</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium">Home</a>
+                    <a href="services.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium">Services</a>
+                    <a href="about.html" class="nav-link text-gray-900 hover:text-indigo-600 font-medium">About</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-indigo-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-600 hover:text-gray-900">Home</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-600 hover:text-gray-900">Services</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-900 font-medium">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Header Section -->
+        <section class="py-12 md:py-16 bg-indigo-600 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">About NexusTech</h1>
+                <p class="text-lg md:text-xl opacity-90">Innovative technology solutions driving business transformation</p>
+            </div>
+        </section>
+
+        <!-- About Content -->
+        <section class="py-16 md:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
+                    <div>
+                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
+                        <p class="text-gray-600 text-lg md:text-xl mb-6">
+                            Founded in 2018, NexusTech emerged from a simple vision: to bridge the gap between cutting-edge technology and business success. We believe that every company, regardless of size, deserves access to world-class technology solutions.
+                        </p>
+                        <p class="text-gray-600 text-lg md:text-xl mb-8">
+                            Today, we're a team of passionate developers, designers, and strategists working together to create digital experiences that drive growth, enhance efficiency, and transform businesses.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 md:gap-8">
+                            <div class="text-center">
+                                <div class="text-2xl md:text-3xl font-bold text-indigo-600 mb-2">150+</div>
+                                <div class="text-gray-600 text-sm md:text-base">Projects Completed</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl md:text-3xl font-bold text-indigo-600 mb-2">98%</div>
+                                <div class="text-gray-600 text-sm md:text-base">Client Satisfaction</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl md:text-3xl font-bold text-indigo-600 mb-2">25+</div>
+                                <div class="text-gray-600 text-sm md:text-base">Team Members</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl md:text-3xl font-bold text-indigo-600 mb-2">5+</div>
+                                <div class="text-gray-600 text-sm md:text-base">Years Experience</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-200 rounded-xl p-8 text-center h-64 flex items-center justify-center">
+                        <span class="text-gray-600 text-lg">Company Overview Visual</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="py-16 md:py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
+                    <p class="text-lg md:text-xl text-gray-600">The principles that guide everything we do</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    <div class="bg-white p-6 rounded-xl text-center">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-lightbulb text-xl text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3">Innovation</h3>
+                        <p class="text-gray-600 text-sm">We embrace new technologies and creative thinking to deliver exceptional solutions.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl text-center">
+                        <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3">Quality</h3>
+                        <p class="text-gray-600 text-sm">We never compromise on quality, ensuring robust and reliable solutions.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl text-center">
+                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3">Collaboration</h3>
+                        <p class="text-gray-600 text-sm">We work closely with our clients as partners in their success.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl text-center">
+                        <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-rocket text-xl text-purple-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3">Growth</h3>
+                        <p class="text-gray-600 text-sm">We're committed to helping our clients grow and scale their businesses.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="py-16 md:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+                    <p class="text-lg md:text-xl text-gray-600">The talented people behind NexusTech</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    <div class="team-card bg-gray-50 p-6 rounded-xl text-center">
+                        <div class="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-gray-600">JD</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">John Doe</h3>
+                        <p class="text-indigo-600 text-sm mb-3">CEO & Founder</p>
+                        <p class="text-gray-600 text-sm">Visionary leader with 15+ years in tech industry.</p>
+                    </div>
+                    <div class="team-card bg-gray-50 p-6 rounded-xl text-center">
+                        <div class="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-gray-600">JS</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Jane Smith</h3>
+                        <p class="text-indigo-600 text-sm mb-3">CTO</p>
+                        <p class="text-gray-600 text-sm">Technical expert specializing in cloud architecture.</p>
+                    </div>
+                    <div class="team-card bg-gray-50 p-6 rounded-xl text-center">
+                        <div class="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-gray-600">MB</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Mike Brown</h3>
+                        <p class="text-indigo-600 text-sm mb-3">Lead Developer</p>
+                        <p class="text-gray-600 text-sm">Full-stack developer with passion for innovation.</p>
+                    </div>
+                    <div class="team-card bg-gray-50 p-6 rounded-xl text-center">
+                        <div class="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-gray-600">SW</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Sarah Wilson</h3>
+                        <p class="text-indigo-600 text-sm mb-3">UX Designer</p>
+                        <p class="text-gray-600 text-sm">Creative designer focused on user experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="py-16 md:py-20 bg-indigo-600 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">Ready to Work Together?</h2>
+                <p class="text-lg md:text-xl mb-6 md:mb-8 opacity-90">Let's discuss how we can help transform your business</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#" class="bg-white text-indigo-600 px-6 md:px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 text-sm md:text-base">
+                        Get in Touch
+                    </a>
+                    <a href="services.html" class="border-2 border-white text-white px-6 md:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition duration-300 text-sm md:text-base">
+                        View Services
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 md:py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <div>
+                    <h3 class="text-lg md:text-xl font-bold mb-4">NexusTech</h3>
+                    <p class="text-gray-400 text-sm md:text-base">Innovative technology solutions for modern businesses.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 md:mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white text-sm md:text-base">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white text-sm md:text-base">Services</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white text-sm md:text-base">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 md:mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm md:text-base">Web Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm md:text-base">Mobile Apps</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm md:text-base">Cloud Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 md:mb-4">Contact</h4>
+                    <p class="text-gray-400 text-sm md:text-base">info@nexustech.com</p>
+                    <p class="text-gray-400 text-sm md:text-base">+1 (555) 123-4567</p>
+                    <p class="text-gray-400 text-sm md:text-base">123 Tech Street, San Francisco, CA</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-gray-400 text-sm md:text-base">
+                <p>&copy; 2024 NexusTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const menuButton = document.getElementById('mobile-menu-button');
+            
+            if (!menu.contains(event.target) && !menuButton.contains(event.target) && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
